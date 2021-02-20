@@ -11,89 +11,23 @@ namespace YetAnotherTwoIntegersProblem
     {
         static void Main(string[] args)
         {
-            string[] InputValues = new string[10];
-            try
+            int Ninputs = int.Parse(Console.ReadLine());
+            for (int i = 0; i < Ninputs; i++)
             {
-                using (StreamReader sr = new StreamReader("E:/inputs.txt"))
-                {
-                    string line;
-                    int i = 0;
-                    while ((line = sr.ReadLine()) != null)
-                    {
-                        InputValues[i] = line;
-                        i++;
-                    }
-                }
-            }
-            catch (Exception e)
-            {
+                int[] Numbers = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
                 
-            }
+                int Number1 = Math.Max(Numbers[0], Numbers[1]);
+                int Number2 = Math.Min(Numbers[0], Numbers[1]);
 
-            long N = int.Parse(InputValues[0]);
-
-            for(long i = 1; i< N + 1; i++)
-            {
-                string[] input = InputValues[i].Split(' ');
-                GetResult(long.Parse(input[0]), long.Parse(input[1]));
-            }
-        }
-
-        static void GetResult(long from , long to)
-        {
-            long points = 1;
-            int trackP = 0;
-            long Move = 0;
-
-            if(from == to)
-            {
-                Console.WriteLine("0");
-            }
-            else
-            {
-                if (from < to)
-                {
-                    while (true)
-                    {
-                        if (from + points < to)
-                        {
-                            points++;
-                            trackP++;
-                            if (trackP == 10)
-                            {
-                                Move++;
-                                trackP = 1;
-                            }
-                        }
-                        else
-                        {
-                            break;
-                        }
-                    }
-                    Console.WriteLine(Move);
-                }
+                if (Number1 == Number2)
+                    Console.WriteLine(0);
                 else
-                {
-                    while (true)
-                    {
-                        if (from - points > to)
+                    for (int ithTime = 1; ithTime < (Number1 / 10) + 2; ithTime++)
+                        if (Number2 + (10 * ithTime) >= Number1)
                         {
-                            points++;
-                            trackP++;
-                            if (trackP == 10)
-                            {
-                                Move++;
-                                trackP = 0;
-                            }
-                        }
-                        else
-                        {
+                            Console.WriteLine(ithTime);
                             break;
                         }
-                    }
-                    Move += 1;
-                    Console.WriteLine(Move);
-                }
             }
         }
     }
