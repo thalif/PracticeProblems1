@@ -10,25 +10,22 @@ namespace RegistrationSystem
     {
         static void Main(string[] args)
         {
-            List<string> UserNameDataBase = new List<string>();
-
+            Dictionary<string, int> UsersDataBase = new Dictionary<string, int>();
             int N = int.Parse(Console.ReadLine());
-            for(int i = 0; i < N; i++)
+
+            for(int i = 0; i< N; i++)
             {
                 string UserName = Console.ReadLine();
-                if (UserNameDataBase.Contains(UserName))
+                if(UsersDataBase.ContainsKey(UserName))
                 {
-                    int k = 1;
-                    while (UserNameDataBase.Contains(UserName + k))
-                    {
-                        k++;
-                    }
-                    UserNameDataBase.Add(UserName + k);
-                    Console.WriteLine(UserName + k);
+                    UsersDataBase[UserName]++;
+                    string NewUser = UserName + (UsersDataBase[UserName]);
+                    UsersDataBase.Add(NewUser, 0);
+                    Console.WriteLine(NewUser);
                 }
                 else
                 {
-                    UserNameDataBase.Add(UserName);
+                    UsersDataBase.Add(UserName, 0);
                     Console.WriteLine("OK");
                 }
             }
