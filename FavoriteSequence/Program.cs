@@ -10,6 +10,7 @@ namespace FavoriteSequence
     {
         static void Main(string[] args)
         {
+            
 
         }
     }

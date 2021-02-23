@@ -85,6 +85,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FavoriteSequence", "Favorit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecialElements", "SpecialElements\SpecialElements.csproj", "{6BCA222A-2732-4AF6-BEA7-7CF873BD256A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegistrationSystem", "RegistrationSystem\RegistrationSystem.csproj", "{BC7DEAEA-9692-43A4-AAEE-736DA97C12B5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -255,6 +257,10 @@ Global
 		{6BCA222A-2732-4AF6-BEA7-7CF873BD256A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BCA222A-2732-4AF6-BEA7-7CF873BD256A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BCA222A-2732-4AF6-BEA7-7CF873BD256A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7DEAEA-9692-43A4-AAEE-736DA97C12B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7DEAEA-9692-43A4-AAEE-736DA97C12B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7DEAEA-9692-43A4-AAEE-736DA97C12B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7DEAEA-9692-43A4-AAEE-736DA97C12B5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
